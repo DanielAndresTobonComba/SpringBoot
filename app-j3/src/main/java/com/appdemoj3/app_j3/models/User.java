@@ -1,21 +1,22 @@
 package com.appdemoj3.app_j3.models;
 
 public class User {
-
+    private String cedula;
     private String nombre; 
     private String apellido;
-    private String email;
-    
     public User() {
     }
-
-    public User(String nombre, String apellido, String email) {
+    public User(String cedula, String nombre, String apellido) {
+        this.cedula = cedula;
         this.nombre = nombre;
         this.apellido = apellido;
-        this.email = email;
     }
-    
-
+    public String getCedula() {
+        return cedula;
+    }
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
+    }
     public String getNombre() {
         return nombre;
     }
@@ -29,13 +30,7 @@ public class User {
         this.apellido = apellido;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    } 
+    
 
     
 
