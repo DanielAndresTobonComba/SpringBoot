@@ -42,7 +42,7 @@ public class UserController {
 
 
     // MAPEAR CON LOS IF
-/*     @GetMapping("/details")
+    @GetMapping("/details")
     public String details(Model model){
     User user = new User();
     user.setNombre("Daniel Andres");
@@ -51,9 +51,9 @@ public class UserController {
     model.addAttribute("title", "Desarrollando con Spring boot CreativeCode");
     model.addAttribute("user", user);
     return "details"; 
-} */
+}
 
-/* 
+
     @GetMapping("/list")
     public String list(ModelMap model){
         List<User> users = Arrays.asList(
@@ -64,10 +64,7 @@ public class UserController {
         model.addAttribute("title", "Listado de Usuarios");
         model.addAttribute("users", users);
         return "list";
-    } */
-
-
-  
+    }
 
 
 }
