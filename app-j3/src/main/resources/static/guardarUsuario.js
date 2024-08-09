@@ -1,7 +1,7 @@
 
 
 document.querySelector('#frmData').addEventListener("submit", (e) => {
-    e.preventDefault(); 
+    //e.preventDefault(); 
 
     let data = "";
 
@@ -44,7 +44,7 @@ document.querySelector('#frmData').addEventListener("submit", (e) => {
             alert("Datos Guardados")
         }
         //return response.json();
-    }).then(response => response.json())
+    })//.then(response => response.json())
     .catch(error => {
         console.error("Error al guardar los datos:", error);
     });

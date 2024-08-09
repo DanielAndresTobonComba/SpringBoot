@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.appdemoj3.app_j3.models.User;
 
+import ch.qos.logback.core.model.Model;
+
 @RestController 
 @RequestMapping("/formulario")
 @CrossOrigin (origins = "*")
@@ -44,17 +46,15 @@ public class FormularioRestController {
 
         System.out.println("Creado exitosamente");
 
-/*         System.out.print(nombre + apellido + cedula); */
-
-
         for (Map.Entry<Integer, User> entry : ht.entrySet()) {
             int key = entry.getKey();
-            // Compara la clave del hashtable con el valor de entrada
             System.out.println(ht.get(key)); 
         }
 
         return "ok";
     }
+
+
 
     @GetMapping("/buscarUsuario/{id}")
     public User mostrarUsuario(@PathVariable int id) {
@@ -63,17 +63,11 @@ public class FormularioRestController {
         
         System.out.println("Entre a buscar en el backend");
 
-        System.out.println("Apellido del usuario creado: " + ht.get(id).getApellido());
+        return ht.get(id);
+        
+        
+        
 
-        // Itera sobre los usuarios y devuelve el primero que cumple la condición
-/*         for (Map.Entry<String, User> entry : userList.entrySet()) {
-            String key = entry.getKey();
-            if (key.equals(id)) {
-                return entry.getValue(); // Devuelve el primer usuario que cumple la condición
-            }
-        } */
-
-        return null; // Devuelve null si no se encuentra ningún usuario
     }
     
     
