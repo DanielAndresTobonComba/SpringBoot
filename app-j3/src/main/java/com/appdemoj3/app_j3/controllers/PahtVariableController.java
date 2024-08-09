@@ -19,28 +19,23 @@ import com.appdemoj3.app_j3.models.User;
 import com.appdemoj3.app_j3.models.dto.ParamsDto;
 
 
-// AQUI SE RECIBE SOLO UNA VARIABLE 
+// AQUI SE RECIBE SOLO UNA VARIABLE
+ 
 @RestController 
 @RequestMapping("/api/demovar")
 @CrossOrigin (origins = "*")
 
 
 public class PahtVariableController {
-
-    private static Hashtable<String, User> userList = new Hashtable<>();
-
-    List<User> foundUsers = new ArrayList<>();
     
-
-/*     @GetMapping("/saludo/{message}")
+    @GetMapping("/saludo/{message}")
     public ParamsDto saludo(@PathVariable String message) {
         ParamsDto param = new ParamsDto(); 
         param.setMessage(message);
         return param;
-    } */
+    } 
 
-    // POSTMAPPING RECIBE INFORMACION Y RETORNA UNA RESPUESTA 
-    // REQUESTBODY TOMA EL JSON Y LO SERIALIZA Y LO CONVIERTE A LA CLASE USER
+
 
 
 

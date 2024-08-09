@@ -4,6 +4,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.appdemoj3.app_j3.models.dto.ParamsDto;
@@ -22,20 +23,15 @@ import com.appdemoj3.app_j3.models.dto.ParamsDto;
     } 
 
 
-/*     @GetMapping("/greeting")
-    public String greeting(@RequestParam(name = "name", defaultValue = "World")
-    String name, Model model) {
-    model.addAttribute("name", name);
-    return "greeting";
 
-    } */
 
+    // RETORNA LOS PARAMETROS QUE LLEGAN Y ESPECIFICAR CUAL TOMO EN CADA PARAMETRO Y SI NO SE ENVIA EL PARAMETRO ID ENTONCE DEVULEVO UNO POR DEFECTO
+    // http://localhost:8080/api/params/user?id=abc&name=daniel
     @GetMapping("/user")
-    public String user(@RequestParam(name = "id", required = false) String id, Model
-    model) {
-    model.addAttribute("id", id);
-    return "userProfile";
-    }
+    @ResponseBody
+    public String user(@RequestParam(name = "id" , defaultValue = "World") String fooId, @RequestParam String name) {
+    return "Id:" + fooId + "  Nombre: " + name;
+    } 
 
 } 
 
