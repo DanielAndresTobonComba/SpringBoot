@@ -1,4 +1,4 @@
-package com.appdemoj3.app_j3.controllers;
+package com.appdemoj3.app_j3.controllers.Formulario;
 
 import java.util.Hashtable;
 
@@ -6,7 +6,7 @@ import com.appdemoj3.app_j3.models.User;
 
 public class HastableUserController {
 
-    public static Hashtable<String , User> userList;
+    public static Hashtable<Integer , User> userList;
 
     private static HastableUserController INSTANCE = new HastableUserController();
 
@@ -14,10 +14,10 @@ public class HastableUserController {
 
         userList = new Hashtable<>();
 
-        User user = new User();
+/*         User user = new User();
         user.setNombre("Daniel");
         user.setApellido("Tobon");
-        user.setCedula("1000240915");
+        user.setCedula("1000240915"); */
     }
 
     public static HastableUserController getController () {

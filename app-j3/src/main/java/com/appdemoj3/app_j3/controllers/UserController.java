@@ -56,7 +56,7 @@ public class UserController {
 
     @GetMapping("/list")
     public String list(ModelMap model){
-        List<User> users = Arrays.asList(
+        List<User> users = Arrays.asList( 
         new User("Carlos", "Perez" , null),
         new User("Martha","Sanchez" , "martha@gmail.com"),
         new User("Vicente","Camargo" , "camargo@gmal.com")
